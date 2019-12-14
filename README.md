@@ -9,11 +9,16 @@ and that containers are not shared (being in the same pod).
 
 This was tested on Fedora 31, with podman 1.6.2.
 
-Clone the flarum repo
+Start by cloning this repository and **cd into that**:
+
+    $ git clone https://github.com/akiross/flarum-podman
+    $ cd flarum-podman
+
+Now clone the flarum repo
 
     $ git clone https://github.com/flarum/flarum
 
-Install dependencies
+Install flarum dependencies
 
     $ podman run --rm -it -v "./flarum/:/app:Z" composer install
 
