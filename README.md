@@ -69,5 +69,9 @@ Start nginx server
 Running on a non-standard port, a manual fix in `flarum/config.php` is needed.
 Change the `url` parameter to include the port `8080` that we exposed above.
 
+    $ podman unshare nvim flarum/config.php
+
 After this, just connect to your host at the port `8080` to begin the
-installation procedure.
+installation procedure, but be careful because I noticed that flarum raises an
+error when using `localhost` in the database host field, while it seems to work
+when using `127.0.0.1`.
